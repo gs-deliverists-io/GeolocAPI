@@ -36,4 +36,14 @@ class GeolocationServiceTest < ActiveSupport::TestCase
       assert result[:longitude], "Result should include longitude"
     end
   end
+
+  test "invalid access key" do
+    VCR.use_cassette("geolocation_invalid_access_key") do
+      service = GeolocationService.new("https://google.com")
+      service.instance_variable_set(:@access_key, "invalid-key")
+      assert_raise StandardError do
+        service.fetch_data
+      end
+    end
+  end
 end
