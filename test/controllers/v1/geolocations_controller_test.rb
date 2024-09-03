@@ -1,10 +1,10 @@
 require "test_helper"
-require 'minitest/autorun'
+require "minitest/autorun"
 
 class V1::GeolocationsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @geolocation = geolocations(:google)
-    @headers = { 'Authorization' => ENV['API_TOKEN'] }
+    @headers = { "Authorization" => ENV["API_TOKEN"] }
   end
 
   test "should get geolocation" do
@@ -17,7 +17,7 @@ class V1::GeolocationsControllerTest < ActionDispatch::IntegrationTest
     def mock.fetch_data; nil; end
 
     GeolocationService.stub :new, mock do
-      post v1_geolocations_url, params: { geolocation: { ip_or_url: 'https://google.com' } }, headers: @headers
+      post v1_geolocations_url, params: { geolocation: { ip_or_url: "https://google.com" } }, headers: @headers
     end
     assert_nil assigns(:geo_data)
     assert_response :unprocessable_entity
@@ -25,13 +25,13 @@ class V1::GeolocationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create geolocation with valid token" do
     VCR.use_cassette("geolocation_google_com") do
-      post v1_geolocations_url, params: { geolocation: { ip_or_url: 'https://google.com' } }, headers: @headers
+      post v1_geolocations_url, params: { geolocation: { ip_or_url: "https://google.com" } }, headers: @headers
       assert_response :created
     end
   end
 
   test "should not create geolocation without valid token" do
-    post v1_geolocations_url, params: { geolocation: { ip_or_url: '134.201.250.155' } }
+    post v1_geolocations_url, params: { geolocation: { ip_or_url: "134.201.250.155" } }
     assert_response :unauthorized
   end
 

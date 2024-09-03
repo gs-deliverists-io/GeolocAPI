@@ -1,7 +1,6 @@
 require "test_helper"
 
 class GeolocationTest < ActiveSupport::TestCase
-
   test "should be valid" do
     assert geolocations(:google).valid?
   end
@@ -17,5 +16,4 @@ class GeolocationTest < ActiveSupport::TestCase
     geo.original_ip_or_url = ""
     assert_not geo.valid?
   end
-
 end
