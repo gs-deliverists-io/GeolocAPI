@@ -8,7 +8,6 @@ class GeolocationService
   def initialize(ip_or_url)
     @ip = resolve_to_ip(ip_or_url)
     @access_key = ENV["IPSTACK_API_KEY"]
-    # @access_key = 'kotek'
   end
 
   def fetch_data
