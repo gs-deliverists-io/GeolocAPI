@@ -22,7 +22,7 @@ class GeolocationServiceTest < ActiveSupport::TestCase
   end
 
   test "fetches geolocation data based on URL with https prefix" do
-    service = GeolocationService.new("https://www.google.com")
+    service = GeolocationService.new("https://google.com")
     result = service.fetch_data
 
     assert result["country_name"], "Result should include country name"

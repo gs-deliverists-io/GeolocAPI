@@ -14,7 +14,7 @@ class GeolocationService
     return unless @ip
 
     response = self.class.get("/#{@ip}", query: { access_key: @access_key })
-    JSON.parse(response.body) if response.success?
+    JSON.parse(response.body).symbolize_keys if response.success?
   end
 
   def resolve_to_ip(ip_or_url)
