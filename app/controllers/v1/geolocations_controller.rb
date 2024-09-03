@@ -44,8 +44,12 @@ module V1
     private
 
     def set_geolocation
-      @geolocation = Geolocation.find(params[:id])
+      @geolocation = Geolocation.find_by(id: params[:id])
+      unless @geolocation
+        render json: { error: "Geolocation not found" }, status: :not_found
+      end
     end
+
 
     def geolocation_params
       params.require(:geolocation).permit(:ip_or_url, :url)
