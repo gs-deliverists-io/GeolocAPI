@@ -1,7 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-hamburg:
+google:
   ip: "192.168.0.1"
+  original_ip_or_url: https://www.google.com
   url: www.google.com
   country: Germany
   city: Hamburg

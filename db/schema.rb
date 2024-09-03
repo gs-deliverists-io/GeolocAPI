@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_09_03_073451) do
+ActiveRecord::Schema[8.0].define(version: 2024_09_03_080846) do
   create_table "geolocations", force: :cascade do |t|
     t.string "ip"
     t.string "url"
@@ -20,5 +20,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_09_03_073451) do
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "original_ip_or_url"
   end
 end
