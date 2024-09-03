@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+hamburg:
+  ip: "192.168.0.1"
+  url: www.google.com
+  country: Germany
+  city: Hamburg
+  latitude: 53.5511
+  longitude: 9.9937
