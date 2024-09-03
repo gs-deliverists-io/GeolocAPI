@@ -8,8 +8,11 @@ module V1
     end
 
     def destroy
-      @geolocation.destroy
-      head :no_content
+      if @geolocation.destroy
+        render json: { message: "Geolocation successfully deleted" }, status: :ok
+      else
+        render json: { error: "Failed to delete geolocation" }, status: :unprocessable_entity
+      end
     end
 
     def create

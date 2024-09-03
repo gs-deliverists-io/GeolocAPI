@@ -104,4 +104,176 @@ http_interactions:
         "country_flag_emoji": "\ud83c\udde9\ud83c\uddea", "country_flag_emoji_unicode":
         "U+1F1E9 U+1F1EA", "calling_code": "49", "is_eu": true}}'
   recorded_at: Tue, 03 Sep 2024 09:16:43 GMT
+- request:
+    method: get
+    uri: http://api.ipstack.com/172.217.16.68?access_key=dupaet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Blocked-At-Loadbalancer:
+      - '1'
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "success": false,
+          "error": {
+            "code": 101,
+            "type": "invalid_access_key",
+            "info": "You have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]"
+          }
+        }
+  recorded_at: Tue, 03 Sep 2024 11:07:19 GMT
+- request:
+    method: get
+    uri: http://api.ipstack.com/172.217.16.68?access_key=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Blocked-At-Loadbalancer:
+      - '1'
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "success": false,
+          "error": {
+            "code": 101,
+            "type": "missing_access_key",
+            "info": "You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"
+          }
+        }
+  recorded_at: Tue, 03 Sep 2024 11:07:38 GMT
+- request:
+    method: get
+    uri: http://api.ipstack.com/172.217.16.68?access_key=dbb4ac3f1148e0c51a8d200928f05d80
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 03 Sep 2024 11:08:18 GMT
+      X-Apilayer-Transaction-Id:
+      - 6399d40e-b339-4b27-b89e-01fe0ca0d740
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Quota-Limit:
+      - '100'
+      X-Quota-Remaining:
+      - '58'
+      X-Increment-Usage:
+      - '1'
+      X-Request-Time:
+      - '0.036'
+    body:
+      encoding: UTF-8
+      string: '{"ip": "172.217.16.68", "type": "ipv4", "continent_code": "EU", "continent_name":
+        "Europe", "country_code": "DE", "country_name": "Germany", "region_code":
+        "HE", "region_name": "Hesse", "city": "Frankfurt am Main", "zip": "60311",
+        "latitude": 50.11090087890625, "longitude": 8.682100296020508, "msa": null,
+        "dma": null, "radius": null, "ip_routing_type": "pop", "connection_type":
+        "dialup", "location": {"geoname_id": 2925533, "capital": "Berlin", "languages":
+        [{"code": "de", "name": "German", "native": "Deutsch"}], "country_flag": "https://assets.ipstack.com/flags/de.svg",
+        "country_flag_emoji": "\ud83c\udde9\ud83c\uddea", "country_flag_emoji_unicode":
+        "U+1F1E9 U+1F1EA", "calling_code": "49", "is_eu": true}}'
+  recorded_at: Tue, 03 Sep 2024 11:08:18 GMT
+- request:
+    method: get
+    uri: http://api.ipstack.com/142.250.181.196?access_key=kotek
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Blocked-At-Loadbalancer:
+      - '1'
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "success": false,
+          "error": {
+            "code": 101,
+            "type": "invalid_access_key",
+            "info": "You have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]"
+          }
+        }
+  recorded_at: Tue, 03 Sep 2024 11:10:16 GMT
 recorded_with: VCR 6.3.1

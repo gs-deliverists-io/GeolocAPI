@@ -37,8 +37,14 @@ class V1::GeolocationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should delete geolocation with valid token" do
     delete v1_geolocation_url(@geolocation), headers: @headers
-    assert_response :no_content
+    assert_response :success
   end
+
+  test "should response with not_found when geolocation is not found" do
+    delete v1_geolocation_url(5), headers: @headers
+    assert_response :not_found
+  end
+
 
   test "should not delete geolocation without valid token" do
     delete v1_geolocation_url(@geolocation)
