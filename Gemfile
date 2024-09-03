@@ -55,4 +55,6 @@ end
 
 group :test do
   gem "rails-controller-testing"
+  gem "vcr"
+  gem "webmock"
 end

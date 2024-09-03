@@ -34,7 +34,7 @@ module V1
           render json: @geolocation.errors, status: :unprocessable_entity
         end
       else
-        render json: { error: 'Unable to fetch geolocation data' }, status: :unprocessable_entity
+        render json: { error: "Unable to fetch geolocation data" }, status: :unprocessable_entity
       end
     end
 
