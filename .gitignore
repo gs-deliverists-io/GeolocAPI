@@ -34,3 +34,6 @@
 
 # Ignore gems
 /vendor/plugins
+
+# Ignore enc files
+*.enc
