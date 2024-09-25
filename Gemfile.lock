@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 640d0f6ab5a2f9f7fca12fd7837a18058f4ab0e6
+  revision: 3997ed6ae4e65cc092d68c8316e06a082dc9026c
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -314,7 +314,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webrick (1.8.1)
+    webrick (1.8.2)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
