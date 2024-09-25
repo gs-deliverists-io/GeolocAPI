@@ -269,7 +269,7 @@ GEM
       rubocop-minitest
       rubocop-performance
       rubocop-rails
-    ruby-lsp (0.18.1)
+    ruby-lsp (0.18.3)
       language_server-protocol (~> 3.17.0)
       prism (~> 1.0)
       rbs (>= 3, < 4)
@@ -278,7 +278,7 @@ GEM
       ruby-lsp (>= 0.18.0, < 0.19.0)
     ruby-progressbar (1.13.0)
     securerandom (0.3.1)
-    sorbet-runtime (0.5.11572)
+    sorbet-runtime (0.5.11581)
     sqlite3 (2.1.0-aarch64-linux-gnu)
     sqlite3 (2.1.0-aarch64-linux-musl)
     sqlite3 (2.1.0-arm-linux-gnu)
