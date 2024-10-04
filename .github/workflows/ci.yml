@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   scan_ruby:
@@ -65,8 +65,7 @@ jobs:
           API_TOKEN: ${{secrets.API_TOKEN}}
           IPSTACK_API_KEY: ${{secrets.IPSTACK_API_KEY}}
           YOUR_ACCESS_KEY: ${{secrets.YOUR_ACCESS_KEY}}
-          # REDIS_URL: redis://localhost:6379/0
-        run: bin/rails db:test:prepare test test:system
+        run: bin/rails db:test:prepare test test:all
 
       - name: Keep screenshots from failed system tests
         uses: actions/upload-artifact@v4
