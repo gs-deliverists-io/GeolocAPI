@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby file: ".ruby-version"
 
 # Use main development branch of Rails
-gem "rails", "~> 8.0.0.beta1"
+gem "rails", "~> 8.0.0.rc1"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3"
 # Use the Puma web server [https://github.com/puma/puma]
